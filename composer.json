@@ -1,0 +1,31 @@
+{
+  "name": "averay/http-exceptions",
+  "type": "library",
+  "description": "Discrete exceptions for all HTTP error status code for use in a server application.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adam Averay",
+      "homepage": "https://adamaveray.au/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Averay\\HttpExceptions\\": "src/"
+    }
+  },
+  "scripts": {
+    "format": "composer run-script format:prettier",
+    "format:prettier": "bunx --bun prettier --write .",
+    "lint": "composer run-script lint:prettier && composer run-script lint:psalm",
+    "lint:prettier": "bunx --bun prettier --check .",
+    "lint:psalm": "vendor/bin/psalm --no-cache"
+  },
+  "require": {
+    "php": ">=8.2",
+    "fig/http-message-util": "^1.1"
+  },
+  "require-dev": {
+    "vimeo/psalm": "^5.22"
+  }
+}
